@@ -14,7 +14,7 @@
 	<name>workshop12</name>
 	<description>day12workshop</description>
 	<properties>
-		<java.version>19</java.version>
+		<java.version>11</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
