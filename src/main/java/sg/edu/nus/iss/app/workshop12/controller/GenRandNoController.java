@@ -71,7 +71,7 @@ public class GenRandNoController {
         String[] imgNumbers = new String [maxGenNo+1];
 
         // Validate only accept gt 0 lte 30
-        if (noOfGenerateNo < 0 || noOfGenerateNo > maxGenNo) {
+        if (noOfGenerateNo < 1 || noOfGenerateNo > maxGenNo) {
             throw new RandNoException();
         }
 
@@ -95,8 +95,11 @@ public class GenRandNoController {
         // Iterate through the set of unique random numbers and add the corresponding number images to the list
         Iterator<Integer> it = uniqueResult.iterator();
         Integer currElem = null;
-        while(it.hasNext()){
+        // Iterate through the set until there are no more elements
+        while(it.hasNext()) {
+            // Get the next element in the set
             currElem = it.next();
+            // Add the element from the imgNumbers array at the index of the current element
             selectedImg.add(imgNumbers[currElem.intValue()]);
         }
 
